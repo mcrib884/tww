@@ -207,16 +207,16 @@ void daObjSwhammer::Act_c::init_mtx() {
 
 /* 00000938-00000A58       .text set_damage__Q213daObjSwhammer5Act_cFv */
 void daObjSwhammer::Act_c::set_damage() {
-    u8 attackState = daPy_getPlayerActorClass()->getCutType();
+    u8 cutType = daPy_getPlayerActorClass()->getCutType();
     M_damage = 0;
     M_damage_dir = 0;
     if (mCylTg.ChkTgHit()) {
         cCcD_Obj *hitObj = mCylTg.GetTgHitObj();
         fopAc_ac_c* hitActor = mCylTg.GetTgHitAc();
         if (hitObj->ChkAtType(AT_TYPE_SKULL_HAMMER) && fopAcM_GetProfName(hitActor) == PROC_PLAYER) {
-            if (attackState == daPy_py_c::CUT_TYPE_HAMMER_FRONTSWING || attackState == daPy_py_c::CUT_TYPE_JUMPCUT_HAMMER) {
+            if (cutType == daPy_py_c::CUT_TYPE_HAMMER_FRONTSWING || cutType == daPy_py_c::CUT_TYPE_JUMPCUT_HAMMER) {
                 M_damage = 1;
-            } else if (attackState == daPy_py_c::CUT_TYPE_HAMMER_SIDESWING) {
+            } else if (cutType == daPy_py_c::CUT_TYPE_HAMMER_SIDESWING) {
                 M_damage_dir = cM_atan2s(mCylTg.GetTgRVecP()->x, mCylTg.GetTgRVecP()->z);
                 M_damage = 2;
             }

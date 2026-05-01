@@ -441,14 +441,22 @@ BOOL body_atari_check(bpw_class* i_this) {
     case AT_TYPE_MACHETE:
     case AT_TYPE_SWORD:
         fopAcM_seStart(actor, JA_SE_LK_SW_HIT_S, 0x44);
-        if (player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EA || player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EB ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_TURN || player->getCutType() == daPy_py_c::CUT_TYPE_CUT_ROLL ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_SWORD || player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_STICK ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_MACHETE || player->getCutType() == daPy_py_c::CUT_TYPE_BT_JUMPCUT ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_BT_ROLLCUT || player->getCutType() == daPy_py_c::CUT_TYPE_BT_VERTICALJUMPCUT ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_CLUB || player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_DN_SWORD ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_SPEAR || player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EXA ||
-            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EXB || player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EXMJ ||
+        if (player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EA ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EB ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_TURN ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_ROLL ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_SWORD ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_STICK ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_MACHETE ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_BT_JUMPCUT ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_BT_ROLLCUT ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_BT_VERTICALJUMPCUT ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_CLUB ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_DN_SWORD ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_JUMPCUT_SPEAR ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EXA ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EXB ||
+            player->getCutType() == daPy_py_c::CUT_TYPE_CUT_EXMJ ||
             player->getCutType() == daPy_py_c::CUT_TYPE_CUT_KESA)
         {
             i_this->m3DF = 2;
